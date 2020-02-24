@@ -227,7 +227,7 @@ def completionStats(matrix):
 # Main
 def main():
     # load in the ground truth
-    GT = loadMat('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/ground_truth(1).mat')
+    GT = loadMat('FILEPATH.mat')
 
     # obtain the 20 random sampling locations for each class
     samples = getSamples(GT)
@@ -237,12 +237,12 @@ def main():
     #samples = loadSamples("test")
 
     # load all six images
-    FE = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/fe.bmp')
-    LE = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/le.bmp')
-    R = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/r.bmp')
-    G = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/g.bmp')
-    B = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/b.bmp')
-    NIR = loadBMP('/Users/edbeckett/Documents/Uni/Third Year/Visual Intelligence/Coursework/Coursework 1 Land Cover Classification/nir.bmp')
+    FE = loadBMP('FILEPATH.bmp')
+    LE = loadBMP('FILEPATH.bmp')
+    R = loadBMP('FILEPATH.bmp')
+    G = loadBMP('FILEPATH.bmp')
+    B = loadBMP('FILEPATH.bmp')
+    NIR = loadBMP('FILEPATH.bmp')
 
     # acquire the pixel values for each image using the sampled coordinates
     samples = sampleImages(FE, LE, R, G, B, NIR, samples)
